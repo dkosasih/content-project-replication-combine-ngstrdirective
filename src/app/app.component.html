@@ -1,0 +1,23 @@
+<app-parent>
+	<hello editable name="{{ name }}"></hello>
+</app-parent>
+
+<div>&nbsp;</div>
+
+<app-parent>
+	<ng-container *editable="let isEdit">
+		<div [style.background-color]="(isEdit)?'blue':'red'">
+			<strong>Editable field with HTML element</strong>
+		</div>
+	</ng-container>
+</app-parent>
+
+ <div>&nbsp;</div>
+
+ <app-parent>
+	<div *editable="let isEdit">
+		<div [style.background-color]="(isEdit)?'blue':'red'">
+			<strong>Editable field with HTML element</strong>
+		</div>
+	</div>
+</app-parent>

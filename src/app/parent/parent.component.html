@@ -1,0 +1,15 @@
+<div class="border">
+	<div class="header">
+		<button *ngIf="!isEdit" (click)="onEdit()">Click to edit</button>
+    <button *ngIf="isEdit" (click)="onEdit()">Cancel edit</button>
+  </div>
+
+  <div class="body">
+    <ng-container *ngTemplateOutlet="alternativeElement? alternativeElement : withComponent; context:editContext">
+    </ng-container>
+  </div>
+  <ng-template #withComponent>
+	<ng-content>
+	</ng-content>
+</ng-template>
+</div>
